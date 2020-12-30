@@ -5,12 +5,12 @@
 #include <QPaintEvent>
 #include <QKeyEvent>
 
-const int BLOCK_SIZE=25; //方块单元边长
-const int MARGIN=5; //边距
-const int AREA_ROW=15; //行数
-const int AREA_COL=15; //列数
+const int BLOCK_SIZE = 25; //方块单元边长
+const int MARGIN = 5; //边距
+const int AREA_ROW = 15; //行数
+const int AREA_COL = 15; //列数
 
-enum Direction
+enum Direction//方向
 {
     UP,
     DOWN,
@@ -19,7 +19,7 @@ enum Direction
     EXIT
 };
 
-enum Choose
+enum Choose//菜单选择
 {
     NO,
     MODE,
@@ -28,7 +28,7 @@ enum Choose
     QUIT
 };
 
-enum Food
+enum Food//果实状态
 {
     COMMON,
     SPEED_UP,
@@ -65,11 +65,11 @@ private:
     QList<QPoint> block; //砖块结构
     Direction dir; //方向
     int score; //分数
-    int TIME_INTERVAL=100; //定时器间隔时间
+    int TIME_INTERVAL = 100; //定时器间隔时间
     int speed = 600 - TIME_INTERVAL; //速度
-    Food foodType = COMMON;
+    Food foodType = COMMON;//果实状态，初始为普通
     int foodType_d = 6;
-    int oneMoreTime = 1;
+    int oneMoreTime = 1;//生命数，初始为1，即可以复活一次
 
 };
 
